@@ -11,7 +11,7 @@ const iteSignNoBrkt = (a, b, c, d) => {
         const sum3 = opArr[k](sum2, d);
         console.log(sum3);
         if (sum3 === 24) {
-          return `${a}${signArr[i]}${b}${signArr[j]}${c}${signArr[k]}${d}`;
+          return `[(${a}${signArr[i]}${b})${signArr[j]}${c}]${signArr[k]}${d}`;
         }
       }
     }
