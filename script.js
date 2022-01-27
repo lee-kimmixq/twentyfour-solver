@@ -91,11 +91,23 @@ const startCalc = () => {
     document.querySelector('#answer').innerText = 'No Answer';
     console.log('No Answer');
   }
-  document.querySelector('#answer').innerText = ans;
+};
+
+const getRandInt = () => {
+  let randCard = Math.ceil(Math.random() * 13);
+  if (randCard > 10) {
+    randCard = 10;
+  }
+  return randCard;
+};
+
+const genRand = () => {
+  document.querySelector('#input').value = `${getRandInt()} ${getRandInt()} ${getRandInt()} ${getRandInt()}`;
 };
 
 const init = () => {
   document.querySelector('#submit').addEventListener("click", startCalc);
+  document.querySelector('#generate').addEventListener("click", genRand);
 };
 
 init();
